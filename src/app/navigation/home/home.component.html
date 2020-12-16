@@ -1,0 +1,37 @@
+<div class="container main-container">
+  <div class="row text-center">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="grid-cotainer">
+          <div class="grid-item display">
+            <h4 *ngIf="confirm">{{ result }}</h4>
+            <h4 *ngIf="!confirm">{{ expression }}</h4>
+          </div>
+        </div>
+        <div class="grid-container">
+          <div (click)="cleanExpression()" class="grid-item ce-button btn">
+            Ce
+          </div>
+          <div (click)="removeLast()" class="grid-item back-button btn">←</div>
+          <div (click)="addExpression('7')" class="grid-item btn">7</div>
+          <div (click)="addExpression('8')" class="grid-item btn">8</div>
+          <div (click)="addExpression('9')" class="grid-item btn">9</div>
+          <div (click)="changeOperator('/')" class="grid-item btn">÷</div>
+          <div (click)="addExpression('4')" class="grid-item btn">4</div>
+          <div (click)="addExpression('5')" class="grid-item btn">5</div>
+          <div (click)="addExpression('6')" class="grid-item btn">6</div>
+          <div (click)="changeOperator('*')" class="grid-item btn">x</div>
+          <div (click)="addExpression('1')" class="grid-item btn">1</div>
+          <div (click)="addExpression('2')" class="grid-item btn">2</div>
+          <div (click)="addExpression('3')" class="grid-item btn">3</div>
+          <div (click)="changeOperator('-')" class="grid-item btn">-</div>
+          <div (click)="addExpression('0')" class="grid-item btn">0</div>
+          <div (click)="addExpression('.')" class="grid-item btn">.</div>
+          <div (click)="showResult()" class="grid-item btn">=</div>
+          <div (click)="changeOperator('+')" class="grid-item btn">+</div>
+        </div>
+      </div>
+      <div class="card-footer"></div>
+    </div>
+  </div>
+</div>
